@@ -42,7 +42,7 @@ end
 
 Timeout.timeout(300) do
   i = 10
-  print "..."
+  print "."
   sleep i
   service = Rancher::Api::Service.find(CATTLE_SERVICE_ID)
   finish = service.actions['finishupgrade']
