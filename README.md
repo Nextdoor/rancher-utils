@@ -1,7 +1,10 @@
 # Rancher utilities
 
-## `upgrade_rancher_service.rb` 
+## Util to upgrade a Rancher service
+
 Ruby script to do in-service upgrade of a Rancher service
+
+    upgrade_rancher_service.rb
 
 ### Usage
 
@@ -15,11 +18,14 @@ Ruby script to do in-service upgrade of a Rancher service
 	gem install rancher-api
 	ruby upgrade_rancher_service.rb
 
+Here's a [video screencast](http://cl.ly/3P3Y20241l16) of this script in action.
+
 #### `circle.yml` example
 
 	deployment:
 	  hub:
 	    branch: master
 	    commands:
-	      - gem install rancher-api; curl 'https://raw.githubusercontent.com/Nextdoor/rancher-utils/master/upgrade_rancher_service.rb' | ruby
+	      - gem install rancher-api
+	      - curl 'https://raw.githubusercontent.com/Nextdoor/rancher-utils/master/upgrade_rancher_service.rb' | ruby
 
